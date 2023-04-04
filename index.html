@@ -4,35 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> QR CODE </title>
+    <title>AGE CALCULATOR</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,400;1,800&display=swap" rel="stylesheet">
+
     <link rel="shortcut icon" href="favicon-32x32.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     
-    <div class="container">
+    <div class="ageCalculator">
+        <form action="#" class="finputs">
 
-        <img src="image-qr-code.png" alt="" class="container__image">
+            <div class="form__inputs">
 
-        <div class="container__text">
+         <div class="input"> 
+            <label for="day" class="label__day"> DAY </label>
+            <input type="number" class="input__day" id="day" placeholder="DD" max="31" maxlength="2"  required>
+            <div class="errormsgday error"> </div>
+        </div>
 
-            <p class="container__text--1">
+        <div class="input"> 
+            <label for="month" class="label__month"> MONTH </label>
 
-                Improve your frontend skill by building projects
+            <input type="number" class="input__month" id="month" maxlength="2" max="12" placeholder="MM" required>
 
-            </p>
+            <div class="errormsgmonth error"> </div>
+         
+        </div>
 
-            <p class="container__text--2">
+        <div class="input">
 
-                scan the QR to visit Frontend Mentor and take your coding skill to next level 
-
-            </p>
+            <label for="year" class="label__year"> YEAR </label>
+            <input type="number" class="input__year" max="2023" maxlength="4"  placeholder="YYYY" id="year" required>  
+            <div class="errormsgyear error">  </div>
 
         </div>
+
+    </div>
+
+        <div class="submit">
+            <div class="border"> &nbsp; </div>
+            <button class="btn" type="submit"> <img src="icon-arrow.svg" alt="arrow-icon"> </button>
+        </div>
+
+        </form>
+
+
+
         
+
+        <div class="age">
+
+            <p class="conv "><span class=" age__years ">- -</span> Years </p>
+            <p class="conv "><span class="age__months  ">- -</span> months </p>
+            <p class="conv"><span class="age__days">- -</span > days </p>
+
+        </div>
 
     </div>
 
